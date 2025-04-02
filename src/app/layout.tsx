@@ -4,9 +4,7 @@ import { ThemeProvider } from "next-themes";
 import "./globals.css";
 
 import { Navbar } from "@/components/Navbar";
-import { Footer } from "@/components/Footer";
-import { PopupWidget }  from "@/components/PopupWidget";
-
+import { FooterConditional } from "@/components/FooterConditional";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,11 +21,10 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
-        <ThemeProvider attribute="class">
+        <ThemeProvider attribute="class" defaultTheme="light">
           <Navbar />
           <div>{children}</div>
-          <Footer />
-          <PopupWidget />
+          <FooterConditional />
         </ThemeProvider>
       </body>
     </html>
