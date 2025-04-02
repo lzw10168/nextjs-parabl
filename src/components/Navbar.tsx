@@ -30,7 +30,7 @@ export const Navbar = () => {
 
         {/* Contact us button */}
         <div className="hidden lg:flex">
-          <Link href="/contact" className="px-4 py-1 text-white bg-blue-900 rounded-2xl">
+          <Link href="/" className="px-4 py-1 text-white bg-blue-900 rounded-2xl">
             contact us
           </Link>
         </div>
