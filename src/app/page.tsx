@@ -1,3 +1,4 @@
+
 import { Container } from "@/components/Container";
 import { Hero } from "@/components/Hero";
 import Vector from '@/components/Vector';
@@ -14,11 +15,14 @@ export default async function Home() {
   let pageData;
   try {
     const response = await getHomePage();
+    console.log('response: ', response);
     pageData = response.data?.attributes;
   } catch (error) {
     console.error("Failed to fetch data from Strapi:", error);
     pageData = null;
   }
+
+  console.log(pageData);
 
   return (
     <Container>

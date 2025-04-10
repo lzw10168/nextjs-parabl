@@ -1,3 +1,5 @@
+'use client';
+
 import Image from "next/image";
 import { Container } from "@/components/Container";
 import { motion } from 'framer-motion';
@@ -22,8 +24,8 @@ export const Hero = ({ data }: HeroProps) => {
   // 如果数据不存在，使用默认值
   const title = data?.title || "Welcome Parabl";
   const buttonText = data?.buttonText || "contact us";
-  const backgroundUrl = data?.backgroundImage?.data?.attributes?.url ? 
-    getStrapiMedia(data.backgroundImage.data.attributes.url) : 
+  const backgroundUrl = data?.backgroundImage?.data?.attributes?.url ?
+    getStrapiMedia(data.backgroundImage.data.attributes.url) :
     "/img/hero.png";
   const altText = data?.backgroundImage?.data?.attributes?.alternativeText || "";
 
