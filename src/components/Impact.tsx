@@ -39,7 +39,6 @@ const Impact: React.FC = () => {
           </div>
         </motion.div>
       </div>
-      {/* 画一个半圆, 圆弧在上 */}
       <div className='absolute bottom-0 left-0 w-full'>
         <div className='w-full h-[800px] bg-[#133461] ' style={{ borderRadius: '100vw 100vw 0 0' }}></div>
       </div>

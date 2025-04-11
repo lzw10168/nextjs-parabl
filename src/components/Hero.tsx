@@ -21,7 +21,6 @@ interface HeroProps {
 }
 
 export const Hero = ({ data }: HeroProps) => {
-  // 如果数据不存在，使用默认值
   const title = data?.title || "Welcome Parabl";
   const buttonText = data?.buttonText || "contact us";
   const backgroundUrl = data?.backgroundImage?.data?.attributes?.url ?

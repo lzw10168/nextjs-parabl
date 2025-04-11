@@ -1,13 +1,8 @@
 import qs from 'qs';
 
-const API_URL = process.env.NEXT_PUBLIC_STRAPI_API_URL || 'http://0.0.0.0:1337';
-console.log('API_URL: ', API_URL);
-
-/**
- * 从Strapi获取数据的通用函数
- */
+const API_URL = 'http://0.0.0.0:1337';
+ 
 export async function fetchAPI(path: string, urlParams: Record<string, any> = {}) {
-  // 合并查询参数
   const queryString = qs.stringify(urlParams);
   const requestUrl = `${API_URL}/api${path}${queryString ? `?${queryString}` : ''}`;
 
@@ -23,9 +18,7 @@ export async function fetchAPI(path: string, urlParams: Record<string, any> = {}
   return data;
 }
 
-/**
- * 获取首页数据
- */
+ 
 export async function getHomePage() {
   const data = await fetchAPI('/home-page', {
     populate: '*'
